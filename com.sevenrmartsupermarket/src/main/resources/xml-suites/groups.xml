@@ -1,0 +1,17 @@
+<suite name="Groups">
+    <listeners>
+        <listener class-name="com.sevenrmartsupermarket.listeners.ExtentReporter" />
+    </listeners>   
+    <test name="Group Test">
+        <groups>
+            <run>
+                <include name="regression" />
+            </run>
+        </groups>
+        <classes>
+            <class name="com.sevenrmartsupermarket.tests.LoginTest" />
+            <class name="com.sevenrmartsupermarket.tests.HomeTest" />
+            <class name="com.sevenrmartsupermarket.tests.ManageNewsTest" />
+        </classes>
+    </test>
+</suite>

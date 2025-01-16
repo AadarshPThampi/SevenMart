@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [SuperMarketTestSuite]">
+  <listeners>
+    <listener class-name="com.sevenrmartsupermarket.listeners.ExtentReporter"/>
+  </listeners>
+  <test parallel="classes" name="SmokeTest(failed)">
+    <classes>
+      <class name="com.sevenrmartsupermarket.tests.HomeTest">
+        <methods>
+          <include name="terminateSession"/>
+          <include name="terminateSession"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.HomeTest -->
+      <class name="com.sevenrmartsupermarket.tests.LoginTest">
+        <methods>
+          <include name="verifyRememberMeCheckBoxIsDisplayed"/>
+          <include name="terminateSession"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.LoginTest -->
+      <class name="com.sevenrmartsupermarket.tests.ManageNewsTest">
+        <methods>
+          <include name="terminateSession"/>
+          <include name="terminateSession"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.ManageNewsTest -->
+    </classes>
+  </test> <!-- SmokeTest(failed) -->
+</suite> <!-- Failed suite [SuperMarketTestSuite] -->

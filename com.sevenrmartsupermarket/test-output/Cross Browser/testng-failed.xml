@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Cross Browser]">
+  <listeners>
+    <listener class-name="com.sevenrmartsupermarket.listeners.ExtentReporter"/>
+  </listeners>
+  <test parallel="tests" name="Run in Firefox(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="com.sevenrmartsupermarket.tests.HomeTest">
+        <methods>
+          <include name="verifyUserLogout"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.HomeTest -->
+      <class name="com.sevenrmartsupermarket.tests.ManageNewsTest">
+        <methods>
+          <include name="verifyNewNewsInput"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.ManageNewsTest -->
+      <class name="com.sevenrmartsupermarket.tests.LoginTest">
+        <methods>
+          <include name="verifyInvalidUserNameAlert"/>
+          <include name="verifyRememberMeCheckBoxIsDisplayed"/>
+          <include name="verifyRememberMeCheckBoxIsEnabled"/>
+          <include name="verifyInvalidPasswordAlert"/>
+          <include name="verifyLoginOptionsAreAvailable"/>
+          <include name="verifySignInButtonIsEnabled"/>
+          <include name="verifyAdminLogin"/>
+          <include name="verifySignInButtonIsDisplayed"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.LoginTest -->
+    </classes>
+  </test> <!-- Run in Firefox(failed) -->
+  <test parallel="tests" name="Run in Chrome(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.sevenrmartsupermarket.tests.HomeTest">
+        <methods>
+          <include name="verifyUserLogout"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.HomeTest -->
+      <class name="com.sevenrmartsupermarket.tests.ManageNewsTest">
+        <methods>
+          <include name="verifyNewNewsInput"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.ManageNewsTest -->
+      <class name="com.sevenrmartsupermarket.tests.LoginTest">
+        <methods>
+          <include name="verifyInvalidUserNameAlert"/>
+          <include name="verifyRememberMeCheckBoxIsDisplayed"/>
+          <include name="verifyRememberMeCheckBoxIsEnabled"/>
+          <include name="verifyInvalidPasswordAlert"/>
+          <include name="verifyLoginOptionsAreAvailable"/>
+          <include name="verifySignInButtonIsEnabled"/>
+          <include name="verifyAdminLogin"/>
+          <include name="verifySignInButtonIsDisplayed"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.LoginTest -->
+    </classes>
+  </test> <!-- Run in Chrome(failed) -->
+  <test parallel="tests" name="Run in Edge(failed)">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="com.sevenrmartsupermarket.tests.HomeTest">
+        <methods>
+          <include name="verifyUserLogout"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.HomeTest -->
+      <class name="com.sevenrmartsupermarket.tests.ManageNewsTest">
+        <methods>
+          <include name="verifyNewNewsInput"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.ManageNewsTest -->
+      <class name="com.sevenrmartsupermarket.tests.LoginTest">
+        <methods>
+          <include name="verifyInvalidUserNameAlert"/>
+          <include name="verifyRememberMeCheckBoxIsDisplayed"/>
+          <include name="verifyRememberMeCheckBoxIsEnabled"/>
+          <include name="verifyInvalidPasswordAlert"/>
+          <include name="verifyLoginOptionsAreAvailable"/>
+          <include name="verifySignInButtonIsEnabled"/>
+          <include name="verifyAdminLogin"/>
+          <include name="verifySignInButtonIsDisplayed"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.sevenrmartsupermarket.tests.LoginTest -->
+    </classes>
+  </test> <!-- Run in Edge(failed) -->
+</suite> <!-- Failed suite [Cross Browser] -->
