@@ -20,7 +20,7 @@ public class LoginTest extends Base {
 		homepage=new HomePage(driver);
 		loginpage.login();
 		String actualProfileName=homepage.getProfileName();
-		String expectedProfileName="Admins";
+		String expectedProfileName="Admin";
 		Assert.assertEquals(actualProfileName, expectedProfileName);
 	}
 	
