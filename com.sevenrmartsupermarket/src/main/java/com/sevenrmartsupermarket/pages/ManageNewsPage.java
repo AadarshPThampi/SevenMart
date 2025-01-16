@@ -41,7 +41,7 @@ public class ManageNewsPage {
 		saveButton.click();
 	}
 	
-	public String getAlert() {
+	public String getAlertMessage() {
 		return alert.getText();
 	}
 

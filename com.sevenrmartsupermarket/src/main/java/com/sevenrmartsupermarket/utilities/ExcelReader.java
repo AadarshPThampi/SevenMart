@@ -49,4 +49,15 @@ public class ExcelReader {
 
 		}
 	}
+	
+	public Object[][] getMultiDimentionalData(int row, int column) {     
+		Object data[][] = new Object[row][column];
+		for(int i=0;i<row;i++)
+		{
+			for(int j=0;j<column;j++) {
+				data[i][j]=getCellData(i, j);
+			}
+		}
+		return data;
+	}
 }

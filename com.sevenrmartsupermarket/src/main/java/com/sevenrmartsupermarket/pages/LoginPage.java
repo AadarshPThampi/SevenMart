@@ -3,6 +3,7 @@ package com.sevenrmartsupermarket.pages;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -19,7 +20,7 @@ public class LoginPage {
 
 	Properties properties = new Properties();
 
-	@CacheLookup
+	
 	@FindBy(xpath = "//input[@name='username']")
 	private WebElement userNameField;
 	@FindBy(xpath = "//input[@name='password']")
@@ -32,6 +33,8 @@ public class LoginPage {
 	private WebElement rememberMeBox;
 	@FindBy(xpath = "//label[@for='remember']")
 	private WebElement rememberMeOption;
+	
+	By userNameBox = By.xpath("//input[@name='username']");
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -45,6 +48,8 @@ public class LoginPage {
 	}
 
 	public void enterUserName(String userName) {
+		waitutility = new WaitUtility(driver);
+		waitutility.waitForVisibility(userNameBox, 30);
 		userNameField.sendKeys(userName);
 	}
 

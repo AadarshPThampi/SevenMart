@@ -5,7 +5,7 @@
     <test name="Group Test">
         <groups>
             <run>
-                <include name="regression" />
+                <include name="regression" />	
             </run>
         </groups>
         <classes>

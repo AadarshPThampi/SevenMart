@@ -78,12 +78,12 @@ public class Base {
 		intialize(browser, url);
 	}
 	
-	@AfterMethod
+	@AfterMethod (alwaysRun = true)
 	public void terminateSession(ITestResult itestresult) {
 		if (itestresult.getStatus() == ITestResult.FAILURE) {
 			screenshotcapture.takeScreenshot(driver, itestresult.getName()); 
 		}
-		driver.close();
+	//	driver.close();
 	}
 	
 }

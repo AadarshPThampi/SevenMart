@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.sevenrmartsupermarket.tests.AdminUsersTest">
+      <class name="com.sevenrmartsupermarket.tests.LoginTest">
         <methods>
-          <include name="verifyUserDeleteAlert" invocation-numbers="0 1 2"/>
+          <include name="verifyAdminLogin"/>
           <include name="terminateSession"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- com.sevenrmartsupermarket.tests.AdminUsersTest -->
+      </class> <!-- com.sevenrmartsupermarket.tests.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

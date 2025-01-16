@@ -80,4 +80,9 @@ public class PageUtility {
 			y = y + 2;
 		}
 	}
+	
+	public void refreshCurrentPage() {
+		String url =driver.getCurrentUrl();
+		driver.get(url);
+	}
 }

@@ -52,7 +52,7 @@ public class AdminUsersPage {
 		userSearchButton.click();
 	}
 	
-	public String createNewUser(String user, String password, String userType) {
+	public String createNewUsers(String user, String password, String userType) {
 		clickOnNewUserButton();
 		userNameField.sendKeys(user);
 		passwordField.sendKeys(password);
@@ -62,7 +62,7 @@ public class AdminUsersPage {
 		return  successAlert.getText();
 	}
 	
-	public String deleteExistingUser(String user) {
+	public String deleteExistingUsers(String user) {
 		clickOnUserSearchButton();
 		userSearchField.sendKeys(user);
 		subSearchButton.click();
@@ -71,5 +71,16 @@ public class AdminUsersPage {
 		pageutility.acceptAlert();
 		return deleteSuccessAlert.getText();
 	}
+	
+	public void createNewAdminUser(String user, String password, String userType) {
+		clickOnNewUserButton();
+		userNameField.sendKeys(user);
+		passwordField.sendKeys(password);
+		pageutility=new PageUtility(driver);
+		pageutility.selectByValue(userTypeSelectDropdown, userType);
+		saveButton.click();
+		
+	}
+	
 	
 }

@@ -26,7 +26,7 @@ public class ManageNewsTest extends Base{
 		excelreader.setExcelFile("NewsData", "newsSheet");
 		String data =excelreader.getCellData(1, 0);
 		managenewspage.sendNews(data);
-		String resultMessage=managenewspage.getAlert();
+		String resultMessage=managenewspage.getAlertMessage();
 		String s[]=resultMessage.split("\n");
 		String actualResult=s[2];
 		String expectedResult ="News Created Successfully";

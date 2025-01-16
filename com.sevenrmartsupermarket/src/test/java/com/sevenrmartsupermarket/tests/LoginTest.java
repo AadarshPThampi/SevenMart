@@ -13,14 +13,14 @@ public class LoginTest extends Base {
 	LoginPage loginpage;
 	HomePage homepage;
 		
-	@Test(groups="smoke")
+	@Test(retryAnalyzer = com.sevenrmartsupermarket.listeners.RetryAnalyzer.class)
 	public void verifyAdminLogin()
 	{
 		loginpage = new LoginPage(driver);
 		homepage=new HomePage(driver);
 		loginpage.login();
 		String actualProfileName=homepage.getProfileName();
-		String expectedProfileName="Admin";
+		String expectedProfileName="Admins";
 		Assert.assertEquals(actualProfileName, expectedProfileName);
 	}
 	
@@ -56,13 +56,13 @@ public class LoginTest extends Base {
 		Assert.assertTrue(loginpage.isSignInButtonDisplayed());
 	}
 	
-	@Test(groups = {"smoke", "regression"})
+	@Test(groups =  "regression")
 	public void verifyRememberMeCheckBoxIsDisplayed() {			
 		loginpage = new LoginPage(driver);
 		Assert.assertTrue(loginpage.isRememberMeCheckBoxDisplayed());
 	}
 	
-	@Test(groups = {"smoke", "regression"})
+	@Test(groups = "regression")
 	public void verifyLoginOptionsAreAvailable() {
 		loginpage = new LoginPage(driver);
 		Assert.assertTrue(loginpage.isLoginOptionsAvailable());
