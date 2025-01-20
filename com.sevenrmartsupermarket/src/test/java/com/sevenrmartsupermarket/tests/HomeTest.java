@@ -16,8 +16,8 @@ public class HomeTest extends Base{
 	@Test(groups = "smoke")
 	public void verifyUserLogout() {			
 		loginpage = new LoginPage(driver);
-		homepage=new HomePage(driver);
-		loginpage.login();
+//		homepage=new HomePage(driver);
+		homepage=loginpage.login();
 		homepage.userLogout();
 		Assert.assertTrue(loginpage.isSignInButtonDisplayed());
 	}

@@ -32,4 +32,33 @@ public class ManageNewsTest extends Base{
 		String expectedResult ="News Created Successfully";
 		Assert.assertEquals(actualResult, expectedResult);
 	}
+	
+	@Test
+	public void verifyNewsDeleteFromTable() {
+		loginpage = new LoginPage(driver);
+		homepage=new HomePage(driver);
+		managenewspage=new ManageNewsPage(driver);
+		loginpage.login();
+		homepage.clickOnTile("Manage News");
+		managenewspage.deleteNewsFromTable();
+		String resultMessage= managenewspage.getAlertMessage();
+		String s[]=resultMessage.split("\n");
+		String actualResult=s[2];
+		String expectedResult ="News Deleted Successfully";
+		Assert.assertEquals(actualResult, expectedResult);
+	}
+	@Test
+	public void verifyNewsEditInTable() {
+		loginpage = new LoginPage(driver);
+		homepage=new HomePage(driver);
+		managenewspage=new ManageNewsPage(driver);
+		loginpage.login();
+		homepage.clickOnTile("Manage News");
+		managenewspage.editNewsInTable("New news of 2025");
+		String resultMessage= managenewspage.getAlertMessage();
+		String s[]=resultMessage.split("\n");
+		String actualResult=s[2];
+		String expectedResult ="News Updated Successfully";
+		Assert.assertEquals(actualResult, expectedResult);
+	}
 }

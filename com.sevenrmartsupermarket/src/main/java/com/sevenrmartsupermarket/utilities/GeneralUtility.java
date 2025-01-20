@@ -8,6 +8,7 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 
 import com.github.javafaker.Faker;
+import com.github.javafaker.Number;
 
 public class GeneralUtility {
 
@@ -61,4 +62,12 @@ public class GeneralUtility {
 		Faker faker = new Faker();
 		return faker.phoneNumber().cellPhone();
 	}
+	
+	public static String getRandomEmailId() {
+		Faker faker = new Faker();
+		return faker.name().lastName() + "@gmail.com";
+	}
+	
+	
+
 }

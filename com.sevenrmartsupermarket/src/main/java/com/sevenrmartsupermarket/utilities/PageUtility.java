@@ -1,5 +1,7 @@
 package com.sevenrmartsupermarket.utilities;
 
+import java.io.File;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -77,12 +79,17 @@ public class PageUtility {
 		int y = 0;
 		while (!isClicked(element)) {
 			js.executeScript("window.scrollBy(0," + y + ")");
-			y = y + 2;
+			y = y + 30;
 		}
 	}
 	
 	public void refreshCurrentPage() {
 		String url =driver.getCurrentUrl();
 		driver.get(url);
+	}
+	
+	public void uploadFile(WebElement element,String path) {
+		File file= new File(path);
+		element.sendKeys(file.getAbsolutePath());
 	}
 }

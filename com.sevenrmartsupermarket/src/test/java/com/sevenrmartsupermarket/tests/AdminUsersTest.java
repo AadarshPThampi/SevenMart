@@ -47,7 +47,7 @@ public class AdminUsersTest extends Base{
 	}
 	
 	@Test
-	public void verifyAdminUserCreation() {					//check the exception
+	public void verifyAdminUserCreation() {					
 		loginpage = new LoginPage(driver);
 		homepage=new HomePage(driver);
 		adminuserspage=new AdminUsersPage(driver);
@@ -59,7 +59,6 @@ public class AdminUsersTest extends Base{
 		String userType="admin";
 		adminuserspage.createNewAdminUser(user, password, userType);
 		homepage.userLogout();
-//		pageutility.refreshCurrentPage();
 		loginpage.login(user, password);
 		Assert.assertEquals(homepage.getProfileName(), user);
 	}
