@@ -62,7 +62,7 @@ public class LoginTest extends Base {
 	}
 	
 	@Test(groups = "regression")
-	public void verifyLoginOptionsAreAvailable() {
+	public void verifyLoginOptionsAreAvailable () {
 		loginpage = new LoginPage(driver);
 		Assert.assertTrue(loginpage.isLoginOptionsAvailable());
 	}
